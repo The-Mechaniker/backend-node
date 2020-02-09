@@ -9,13 +9,82 @@
             "command": "npm run start",
             "group": "build",
             "problemMatcher": []
-        }
+        },
         {
             "label": "Start Debugging",
             "type": "shell",
             "command": "npm run start:debug",
             "group": "build",
             "problemMatcher": []
+        },
+        {
+            "label": "Format Code",
+            "type": "shell",
+            "command": "npm run format",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "Create DTO",
+            "type": "shell",
+            "command": "nest g class dto/${input:nameInputPrompt}.dto --no-spec",
+            "group": "none",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Create Interface",
+            "type": "shell",
+            "command": "nest g interface interface/${input:nameInputPrompt} --no-spec",
+            "group": "none",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Create Schema",
+            "type": "shell",
+            "command": "nest g class schemas/${input:nameInputPrompt}.schema --no-spec",
+            "group": "none",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "nameInputPrompt",
+            "default": "name",
+            "type": "promptString",
+            "description": "Picks name for code generation commands"
         }
     ]
 }
