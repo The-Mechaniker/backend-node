@@ -4,9 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start",
+            "label": "Start Running",
             "type": "shell",
             "command": "npm run start",
+            "group": "build",
+            "problemMatcher": []
+        }
+        {
+            "label": "Start Debugging",
+            "type": "shell",
+            "command": "npm run start:debug",
             "group": "build",
             "problemMatcher": []
         }
