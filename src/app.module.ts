@@ -9,11 +9,11 @@ import config from './config/keys';
   imports: [
     MongooseModule.forRoot(config.mongoURI, {
       connectionName: 'users',
-      retryAttempts: 3
+      retryAttempts: 3,
     }),
     UserManagementModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}

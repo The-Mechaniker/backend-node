@@ -1,3 +1,3 @@
 export class MechanikerConstant {
-    public static USER_COLLECTION_NAME = 'User';
+  public static USER_COLLECTION_NAME = 'User';
 }

@@ -7,7 +7,10 @@ import { MechanikerConstant } from 'src/util/MechanikerConstant';
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel(MechanikerConstant.USER_COLLECTION_NAME) private readonly userModel: Model<User>) {}
+  constructor(
+    @InjectModel(MechanikerConstant.USER_COLLECTION_NAME)
+    private readonly userModel: Model<User>,
+  ) {}
 
   async create(createUserDto: CreateUserDto): Promise<User> {
     const createdUser = new this.userModel(createUserDto);
